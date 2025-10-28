@@ -156,11 +156,12 @@ public class SnapdealActions {
 				
 				driver.findElement(By.xpath("//div[@class='center quick-view-bar  btn btn-theme-secondary  ']")).click();
 				
-				String shoeCost = driver.findElement(By.xpath("//div[@class='product-price pdp-e-i-PAY-l clearfix']/span")).getText();
-				
-				String shoeDiscount = driver.findElement(By.xpath("//span[@class='percent-desc ']")).getText();
-				
-				System.out.println("COst of the shoe is : " + shoeCost +"||" + " Discount applied is " + shoeDiscount);
+				//price and discount
+				String price=driver.findElement(By.xpath("//div[@class='lfloat marR10']/span[2]")).getText();
+				System.out.println("The price of the shoe: "+price);
+				String discount=driver.findElement(By.xpath("//div[@class='product-discount']/span")).getText();
+				System.out.println("The Discount for the shoe is: "+discount);
+
 
 		//Step 12 : Take screenshot of shoes
 				
@@ -177,3 +178,4 @@ public class SnapdealActions {
 	}
 
 }
+
